@@ -14,6 +14,8 @@ const colors={
     pink1: '#f0b7b4',
     textinput : '#dee8f1',
     postbg : '#E9F4FF',
+    lightgrey : '#a3a3a3',
+    hwcard : '#f6f7f9'
 }
 
 export default colors

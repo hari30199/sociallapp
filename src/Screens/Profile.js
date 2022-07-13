@@ -120,6 +120,7 @@ export default function TabViewExample() {
 const styles = StyleSheet.create({
   scene: {
     flex: 1,
+    // backgroundColor:'white'
   },
   tabbar: {
     backgroundColor: 'white',

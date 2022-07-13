@@ -27,7 +27,14 @@ const images = {
     rollno :require('../assests/rollnumber.png'),
     datepicker : require('../assests/date.png'),
     address : require('../assests/location.png'),
-    notfound : require('../assests/notfound.png')
+    notfound : require('../assests/notfound.png'),
+    download : require('../assests/Download.png'),
+    time : require('../assests/time.png'),
+    datecard : require('../assests/datecard.png'),
+    liveicon : require('../assests/liveicon.png'),
+    livedate : require('../assests/livedate.png'),
+    liveclock : require('../assests/liveclock.png'),
+    liveimg : require('../assests/liveimag.png')
 
   }
   
