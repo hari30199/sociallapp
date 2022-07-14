@@ -9,7 +9,7 @@ import {
   Image,
   SafeAreaView,
 } from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation,useIsFocused} from '@react-navigation/native';
 import SvgUri from 'react-native-svg-uri';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 
@@ -23,6 +23,7 @@ import ProfileBatches from '@component/ProfileBatches';
 
 const {width} = Dimensions.get('screen');
 const {height} = Dimensions.get('screen');
+
 
 const Info = () => <StudentsInfo />;
 
@@ -39,7 +40,14 @@ const renderScene = SceneMap({
 });
 
 export default function TabViewExample() {
+
+  const isFocused = useIsFocused();
+  const names = isFocused ? 'some' : 'var';
+  global.tab = names;
+
+
   const navigation = useNavigation();
+  navigation.setOptions({ tabBarVisible: false })
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     {key: 'Info', title: 'Info'},

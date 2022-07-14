@@ -16,12 +16,8 @@ const BottomBar = createBottomTabNavigator();
 
 export default function TabBar ({barColor}) {
   const modalcon = global.tabbuttonprops
-  // useEffect(()=>{
-  //   modalcon
-  //   global.tabbuttonprops
-  //   console.log(global.tabbuttonprops)
-  //   return modalcon
-  // },[])
+  const mor = global.tab
+console.log(mor,global.tab)
   BottomBar.navigationOptions = ({ navigation }) => {
     let tabBarVisible = true;
     if (navigation.state.index > 0 && navigation.state.routes.routeName === "Profile") {
@@ -37,6 +33,7 @@ export default function TabBar ({barColor}) {
 <BottomBar.Navigator
 tabBar={(props) => (
   <View style={styles.navigatorContainer}>
+    
     <BottomTabBar
       {...props}
       
@@ -76,10 +73,13 @@ tabBarOptions={{
     )
   }}
 />
+
 <BottomBar.Screen
   name="Rocket"
   component={Chats}
+  
   options={{
+    
     tabBarButton: (props) => (modalcon == 'var' || modalcon == undefined?
       <Hometabbarmodal bgColor={barColor} {...props}/> : <Batchtabbarmodal bgColor={barColor} {...props}/>
     )

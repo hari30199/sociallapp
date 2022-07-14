@@ -14,6 +14,7 @@ import colors from '@constants/Colors';
 import images from '@constants/Images';
 import SvgUri from 'react-native-svg-uri';
 import Homecarousel from '@component/Homecarousel';
+import Stats from '@component/Stats';
 
 export default function Home() {
   const isFocused = useIsFocused();
@@ -66,6 +67,7 @@ export default function Home() {
         style={{backgroundColor: colors.white}}
         contentContainerStyle={{alignItems: 'center', paddingBottom: 120}}>
         <Homecarousel />
+        <Stats/>
         <View style={styles.poster}>
           <View style={styles.postercontent}>
             {/* posterheader  */}

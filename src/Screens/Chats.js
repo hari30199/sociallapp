@@ -1,129 +1,113 @@
-
-import React, {useState} from 'react';
-import {View,Text,StyleSheet,TouchableOpacity,Image,SafeAreaView} from 'react-native';
-import CustomSwitch from '../components/custome';
-import Overview from '@component/Overview';
-import Studymaterial from '@component/Studymaterial';
-import Liveclasses from '@component/Liveclasses';
-import Tests from '@component/Tests';
-import Fees from '@component/Fees';
-import Notice from '@component/Notice';
-import Homework from '@component/Homework';
-import fonts from '@constants/Fonts';
-import colors from '@constants/Colors';
-import images from '@constants/Images';
-import { useNavigation } from '@react-navigation/native';
-
-export default function HomeScreen() {
-    const navigation = useNavigation()
-    const [BatchsTab, setBatchsTab] = useState(1);
-
-    const onSelectSwitch = value => {
-        setBatchsTab(value);
-      };
-      return (
-<SafeAreaView style={{flex:1,backgroundColor:'white'}}>
-<View style={{width:'100%',backgroundColor:'white',}} >
-<View style={styles.head}>
-            <View style={styles.backbutn}>
-              <TouchableOpacity
-                onPress={navigation.goBack}
-                style={{
-                  width: 60,
-                  height: 40,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Image
-                  style={{width: 14, height: 24, left: 4, top: 4}}
-                  source={images.backicon}
-                />
-              </TouchableOpacity>
-            </View>
-            <View
-              style={{justifyContent: 'center', alignItems: 'center', top: 30}}>
-              <Text
-                style={{
-                  fontFamily: fonts.Bold,
-                  color: colors.activecolor,
-                  fontSize: 34,
-                }}>
-                Nschool Academy
-              </Text>
-              <Text
-                style={{
-                  fontFamily: fonts.Medium,
-                  color: colors.grey,
-                  fontSize: 18,
-                }}>
-                Science Class
-              </Text>
-            </View>
-          </View>
-<CustomSwitch
-  selectionMode={1}
-  option1="Overview"
-  option2="study Material"
-  option3="Live Classes"
-  option4="Fees"
-  option5="Tests"
-  option6="Notice"
-  option7="Homework"
-  onSelectSwitch={onSelectSwitch}
-  />
-</View>
-
-
-{BatchsTab == 1 &&
-<View style={{width:'100%',height:'auto'}}>
-  <Overview/>
-</View>
-}
-{BatchsTab == 2 &&
-  <View style={{width:'100%',height:'auto'}}>
-    <Studymaterial/>
-  </View>
-}
-{BatchsTab == 3 &&
-  <View style={{width:'100%',height:'auto',flex:1}}>
-    <Liveclasses/>
-  </View>
-}
-{BatchsTab == 4 &&
-  <View style={{width:'100%',height:'auto'}}>
-    <Fees/>
-  </View>
-}
-{BatchsTab == 5 &&
-  <View style={{width:'100%',height:'auto'}}>
-    <Tests/>
-  </View>
-}
-{BatchsTab == 6 &&
-  <View style={{width:'100%',height:'auto'}}>
-    <Notice/>
-  </View>
-}
-{BatchsTab == 7 &&
-  <View style={{backgroundColor:'white',flex:1}}>
-    <Homework/>
-  </View>
-}
-
-
-</SafeAreaView>
+import React from 'react';
+import {
+  SafeAreaView,
+  StyleSheet,
+  View,
+  Text,
+  StatusBar,
+  FlatList,
+} from 'react-native';
+import Swipeable from 'react-native-gesture-handler/Swipeable';
+const todoList = [
+  { id: '1', text: 'Learn JavaScript' },
+  { id: '2', text: 'Learn React' },
+  { id: '3', text: 'Learn TypeScript' },
+];
+const Separator = () => <View style={styles.itemSeparator} />;
+const LeftSwipeActions = () => {
+  return (
+    <View
+      style={{ flex: 1, backgroundColor: '#ccffbd', justifyContent: 'center' }}
+    >
+      <Text
+        style={{
+          color: '#40394a',
+          paddingHorizontal: 10,
+          fontWeight: '600',
+          paddingHorizontal: 30,
+          paddingVertical: 20,
+        }}
+      >
+        Bookmark
+      </Text>
+    </View>
+  );
+};
+const rightSwipeActions = () => {
+  return (
+    <View
+      style={{
+        backgroundColor: '#ff8303',
+        justifyContent: 'center',
+        alignItems: 'flex-end',
+      }}
+    >
+      <Text
+        style={{
+          color: '#1b1a17',
+          paddingHorizontal: 10,
+          fontWeight: '600',
+          paddingHorizontal: 30,
+          paddingVertical: 20,
+        }}
+      >
+        Delete
+      </Text>
+    </View>
+  );
+};
+const swipeFromLeftOpen = () => {
+  alert('Swipe from left');
+};
+const swipeFromRightOpen = () => {
+  alert('Swipe from right');
+};
+const ListItem = ({ text }) => (
+  <Swipeable
+    renderLeftActions={LeftSwipeActions}
+    renderRightActions={rightSwipeActions}
+    onSwipeableRightOpen={swipeFromRightOpen}
+    onSwipeableLeftOpen={swipeFromLeftOpen}
+  >
+    <View
+      style={{
+        paddingHorizontal: 30,
+        paddingVertical: 20,
+        backgroundColor: 'white',
+      }}
+    >
+      <Text style={{ fontSize: 24 }}>
+        {text}
+      </Text>
+    </View>
+  </Swipeable>
 );
-}
-
+const SwipeGesture = () => {
+  return (
+    <>
+      <StatusBar />
+      <SafeAreaView style={styles.container}>
+        <Text style={{ textAlign: 'center', marginVertical: 20 }}>
+          Swipe right or left
+        </Text>
+        <FlatList
+          data={todoList}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => <ListItem {...item} />}
+          ItemSeparatorComponent={() => <Separator />}
+        />
+      </SafeAreaView>
+    </>
+  );
+};
 const styles = StyleSheet.create({
-  head: {
-    backgroundColor: 'white',
-    width: '100%',
-    height: 160,
+  container: {
+    flex: 1,
   },
-  backbutn: {
-    backgroundColor: 'white',
-    width: '100%',
-    top: 10,
+  itemSeparator: {
+    flex: 1,
+    height: 1,
+    backgroundColor: '#444',
   },
-})
+});
+export default SwipeGesture;

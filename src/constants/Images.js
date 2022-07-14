@@ -34,7 +34,29 @@ const images = {
     liveicon : require('../assests/liveicon.png'),
     livedate : require('../assests/livedate.png'),
     liveclock : require('../assests/liveclock.png'),
-    liveimg : require('../assests/liveimag.png')
+    liveimg : require('../assests/liveimag.png'),
+    pdffile : require('../assests/pdf.png'),
+    jpgfile : require('../assests/jpg.png'),
+    zipfile : require('../assests/zip.png'),
+    smshare : require('../assests/smshare.png'),
+    smdownload : require('../assests/smdownload.png'),
+    ovbatches : require('../assests/ovbatches.png'),
+    ovqrcode : require('../assests/ovqrcode.png'),
+    ovwbatch : require('../assests/ovwbatches.png'),
+    payfees : require('../assests/payFees.png'),
+    testdownload : require('../assests/testdownload.png'),
+    settingsarrow : require('../assests/setting.png'),
+    privacypolicy : require('../assests/settingspp.png'),
+    temrs : require('../assests/settingsterms.png'),
+    help : require('../assests/settingshelp.png'),
+    settingsprofile : require('../assests/settingsprofile.png'),
+    Batch1 : require('../assests/Batch1.png'),
+    Batch2 : require('../assests/Batch2.png'),
+    SearchIcon : require('../assests/searchicon.png'),
+    notice1 :require('../assests/notice1.png'),
+    notice2 : require('../assests/notice2.png'),
+    ChatProfile1 : require('../assests/ChatPro1.png'),
+    Active:require('../assests/Active.png')
 
   }
   
