@@ -70,7 +70,7 @@ export default function Stats() {
               }}>
               <TouchableOpacity
                 
-                style={[styles.touchables, {backgroundColor: colors.green1,width:86}]}>
+                style={[styles.touchables, {backgroundColor: colors.green1,width:83}]}>
                 <Text style={styles.TouchableOpacitytext}>3</Text>
               </TouchableOpacity>
             </View>

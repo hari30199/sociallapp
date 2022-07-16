@@ -12,6 +12,8 @@ import fonts from '@constants/Fonts';
 import colors from '@constants/Colors';
 import images from '@constants/Images';
 import SvgUri from 'react-native-svg-uri';
+import Feather from 'react-native-vector-icons/Feather'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const {width} = Dimensions.get('screen');
 const {height} = Dimensions.get('screen');
@@ -71,9 +73,9 @@ const Liveclasses = () => {
           {/* -------date and time------- */}
 
           <View style={styles.datetimecont}>
-            <SvgUri style={{left: 10}} source={images.liveclock} />
+          <MaterialCommunityIcons name='clock-time-three-outline' sixe={10} color={colors.orange}  style={{left:10}}/>
             <Text style={styles.time}>8:00 AM</Text>
-            <SvgUri style={{left: 34}} source={images.livedate} />
+            <Feather name='calendar' color={colors.orange} size={10} style={{left:36}}/>
             <Text style={styles.date}>7th July, 2022</Text>
           </View>
 

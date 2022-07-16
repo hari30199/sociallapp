@@ -12,7 +12,7 @@ import fonts from '@constants/Fonts';
 import colors from '@constants/Colors';
 import images from '@constants/Images';
 import SvgUri from 'react-native-svg-uri';
-
+import Feather from 'react-native-vector-icons/Feather'
 
 const {width} = Dimensions.get('screen');
 const {height} = Dimensions.get('screen');
@@ -35,7 +35,7 @@ const Notce = () => {
           </View>
         </View>
         <TouchableOpacity style={styles.download}>
-          <SvgUri source={images.testdownload} />
+        <Feather name='download' color={colors.activecolor} size={16} style={{}}/>
         </TouchableOpacity>
       </View>
     </View>
@@ -54,7 +54,7 @@ const Notce = () => {
           </View>
         </View>
         <TouchableOpacity style={styles.download}>
-          <SvgUri source={images.testdownload} />
+        <Feather name='download' color={colors.activecolor} size={16} style={{}}/>
         </TouchableOpacity>
       </View>
     </View>

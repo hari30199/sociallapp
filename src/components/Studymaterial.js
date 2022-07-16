@@ -12,6 +12,7 @@ import fonts from '@constants/Fonts';
 import colors from '@constants/Colors';
 import images from '@constants/Images';
 import SvgUri from 'react-native-svg-uri';
+import Feather from 'react-native-vector-icons/Feather'
 import { ScrollView } from 'react-native-gesture-handler';
 
 const {width} = Dimensions.get('screen');
@@ -30,10 +31,10 @@ const Studymaterial = () => {
             <Text style={styles.text}>Tamil notes.pdf</Text>
           </View>
           <TouchableOpacity style={styles.touchables}>
-            <SvgUri source={images.smdownload} />
+          <Feather name='download' color={colors.black} size={16} style={{}}/>
           </TouchableOpacity>
           <TouchableOpacity style={styles.touchables}>
-            <SvgUri source={images.smshare} />
+          <Feather name='share-2' color={colors.black} size={16} style={{}}/>
           </TouchableOpacity>
         </View>
         <View style={styles.card}>
@@ -44,10 +45,10 @@ const Studymaterial = () => {
             <Text style={styles.text}>social science.jpg</Text>
           </View>
           <TouchableOpacity style={styles.touchables}>
-            <SvgUri source={images.smdownload} />
+          <Feather name='download' color={colors.black} size={16} style={{}}/>
           </TouchableOpacity>
           <TouchableOpacity style={styles.touchables}>
-            <SvgUri source={images.smshare} />
+          <Feather name='share-2' color={colors.black} size={16} style={{}}/>
           </TouchableOpacity>
         </View>
         <View style={styles.card}>
@@ -58,10 +59,10 @@ const Studymaterial = () => {
             <Text style={styles.text}>science.zip</Text>
           </View>
           <TouchableOpacity style={styles.touchables}>
-            <SvgUri source={images.smdownload} />
+          <Feather name='download' color={colors.black} size={16} style={{}}/>
           </TouchableOpacity>
           <TouchableOpacity style={styles.touchables}>
-            <SvgUri source={images.smshare} />
+          <Feather name='share-2' color={colors.black} size={16} style={{}}/>
           </TouchableOpacity>
         </View>
         </ScrollView>

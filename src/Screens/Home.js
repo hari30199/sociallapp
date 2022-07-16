@@ -14,6 +14,9 @@ import colors from '@constants/Colors';
 import images from '@constants/Images';
 import SvgUri from 'react-native-svg-uri';
 import Homecarousel from '@component/Homecarousel';
+import Feather from 'react-native-vector-icons/Feather';
+import Octicons from 'react-native-vector-icons/Octicons';
+import Entypo from 'react-native-vector-icons/Entypo'
 import Stats from '@component/Stats';
 
 export default function Home() {
@@ -57,7 +60,7 @@ export default function Home() {
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-          <SvgUri source={images.Notification} />
+           <Feather name='bell' size={26} color={colors.black} />
         </View>
       </View>
 
@@ -87,7 +90,7 @@ export default function Home() {
                       alignItems: 'center',
                       top: 10,
                     }}>
-                    <SvgUri source={images.global} />
+                    <Entypo name='globe' size={10}/>
                     <Text
                       style={{fontFamily: fonts.Medium, color: colors.black}}>
                       {' '}
@@ -101,12 +104,9 @@ export default function Home() {
                   width: '10%',
                   height: 80,
                   justifyContent: 'center',
-                  top: 14,
+                  // top: 14,
                 }}>
-                <SvgUri
-                  style={{height: 70, width: 40}}
-                  source={images.postdetail}
-                />
+                <Feather name='more-vertical' size={26} />
               </TouchableOpacity>
             </View>
 
@@ -125,13 +125,13 @@ export default function Home() {
             {/* posterbuttons */}
             <View style={styles.posterbuttons}>
               <TouchableOpacity style={styles.posterbutton}>
-                <SvgUri source={images.like} />
+                <Feather name='thumbs-up' size={20} />
               </TouchableOpacity>
               <TouchableOpacity style={styles.posterbutton}>
-                <SvgUri source={images.comments} />
+              <Octicons name='comment' size={20} />
               </TouchableOpacity>
               <TouchableOpacity style={styles.posterbutton}>
-                <SvgUri source={images.share} />
+              <Feather name='upload' size={20} />
               </TouchableOpacity>
             </View>
           </View>
@@ -153,7 +153,7 @@ export default function Home() {
                       alignItems: 'center',
                       top: 10,
                     }}>
-                    <SvgUri source={images.global} />
+                    <Entypo name='globe' size={10}/>
                     <Text
                       style={{fontFamily: fonts.Medium, color: colors.black}}>
                       {' '}
@@ -167,12 +167,9 @@ export default function Home() {
                   width: '10%',
                   height: 80,
                   justifyContent: 'center',
-                  top: 14,
+                  // top: 14,
                 }}>
-                <SvgUri
-                  style={{height: 70, width: 40}}
-                  source={images.postdetail}
-                />
+                 <Feather name='more-vertical' size={26} />
               </TouchableOpacity>
             </View>
 
@@ -191,13 +188,13 @@ export default function Home() {
             {/* posterbuttons */}
             <View style={styles.posterbuttons}>
               <TouchableOpacity style={styles.posterbutton}>
-                <SvgUri source={images.like} />
+              <Feather name='thumbs-up' size={20} />
               </TouchableOpacity>
               <TouchableOpacity style={styles.posterbutton}>
-                <SvgUri source={images.comments} />
+              <Octicons name='comment' size={20} />
               </TouchableOpacity>
               <TouchableOpacity style={styles.posterbutton}>
-                <SvgUri source={images.share} />
+              <Feather name='upload' size={20} />
               </TouchableOpacity>
             </View>
           </View>
@@ -220,7 +217,7 @@ export default function Home() {
                       alignItems: 'center',
                       top: 10,
                     }}>
-                    <SvgUri source={images.global} />
+                    <Entypo name='globe' size={10}/>
                     <Text
                       style={{fontFamily: fonts.Medium, color: colors.black}}>
                       {' '}
@@ -234,12 +231,10 @@ export default function Home() {
                   width: '10%',
                   height: 80,
                   justifyContent: 'center',
-                  top: 14,
+                  // top: 14,
+                  // backgroundColor:'red'
                 }}>
-                <SvgUri
-                  style={{height: 70, width: 40}}
-                  source={images.postdetail}
-                />
+                <Feather name='more-vertical' size={26} />
               </TouchableOpacity>
             </View>
 
@@ -258,13 +253,13 @@ export default function Home() {
             {/* posterbuttons */}
             <View style={styles.posterbuttons}>
               <TouchableOpacity style={styles.posterbutton}>
-                <SvgUri source={images.like} />
+              <Feather name='thumbs-up' size={20} />
               </TouchableOpacity>
               <TouchableOpacity style={styles.posterbutton}>
-                <SvgUri source={images.comments} />
+              <Octicons name='comment' size={20} />
               </TouchableOpacity>
               <TouchableOpacity style={styles.posterbutton}>
-                <SvgUri source={images.share} />
+              <Feather name='upload' size={20} />
               </TouchableOpacity>
             </View>
           </View>

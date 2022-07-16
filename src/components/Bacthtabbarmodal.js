@@ -15,6 +15,7 @@ import SvgUri from 'react-native-svg-uri';
 import images from '@constants/Images';
 import fonts from '@constants/Fonts';
 import {useNavigation} from '@react-navigation/native';
+import Feather from 'react-native-vector-icons/Feather'
 import {TextInput} from 'react-native-gesture-handler';
 const {width} = Dimensions.get('screen');
 
@@ -100,7 +101,7 @@ export default function Batchtabbarmodal({bgColor}) {
       <TouchableOpacity
         style={styles.button}
         onPress={() => setModalVisible(true)}>
-        <SvgUri source={images.Plus} />
+        <Feather name='plus'  color={colors.white} size={22}/>
       </TouchableOpacity>
     </View>
   );

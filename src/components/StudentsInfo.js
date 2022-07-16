@@ -12,6 +12,8 @@ import colors from '@constants/Colors';
 import SvgUri from 'react-native-svg-uri';
 import images from '@constants/Images';
 import fonts from '@constants/Fonts';
+import Feather from 'react-native-vector-icons/Feather'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const {width} = Dimensions.get('screen');
@@ -36,7 +38,7 @@ export default function StudentsInfo() {
               Basic Information
             </Text>
             <TouchableOpacity>
-              <SvgUri source={images.editicon} />
+            <Feather name='edit'  size={18} color={colors.black} style={{}}/>
             </TouchableOpacity>
           </View>
           <View style={{width: width * 0.8, height: height * 0.45}}>
@@ -63,9 +65,7 @@ export default function StudentsInfo() {
               ></TextInput>
             </View>
             <View style={styles.textinputcontainer}>
-              <SvgUri
-                source={images.mail}
-                style={{width: 16, height: 18, top: 26}}></SvgUri>
+            <Feather name='mail' color={colors.orange} size={20} style={{top:20}}/>
               <TextInput
                 style={styles.textfield}
                 placeholder="Emailid@gmail.com"
@@ -74,10 +74,7 @@ export default function StudentsInfo() {
               ></TextInput>
             </View>
             <View style={styles.textinputcontainer}>
-              <SvgUri
-                source={images.rollno}
-                style={{width: 16, height: 18, top: 26}}
-              />
+            <Feather name='list' color={colors.orange} size={20} style={{top:20}}/>
               <TextInput
                 style={styles.textfield}
                 placeholder="Roll Number"
@@ -86,10 +83,7 @@ export default function StudentsInfo() {
               ></TextInput>
             </View>
             <View style={styles.textinputcontainer}>
-              <SvgUri
-                source={images.datepicker}
-                style={{width: 16, height: 18, top: 26}}
-              />
+            <Feather name='calendar' color={colors.orange} size={18} style={{top:20}}/>
               <TextInput
                 style={styles.textfield}
                 placeholder="Date of Join"
@@ -110,7 +104,7 @@ export default function StudentsInfo() {
               Parent’s Information
             </Text>
             <TouchableOpacity>
-              <SvgUri source={images.editicon} />
+            <Feather name='edit'  size={18} color={colors.black} style={{}}/>
             </TouchableOpacity>
           </View>
           <View style={{width: width * 0.8, height: height * 0.45}}>
@@ -138,10 +132,7 @@ export default function StudentsInfo() {
               ></TextInput>
             </View>
             <View style={styles.textinputcontainer}>
-              <SvgUri
-                source={images.mail}
-                style={{width: 16, height: 18, top: 26}}
-              />
+             <Feather name='mail' color={colors.orange} size={20} style={{top:20}}/>
               <TextInput
                 style={styles.textfield}
                 placeholder="Emailid@gmail.com"
@@ -150,10 +141,7 @@ export default function StudentsInfo() {
               ></TextInput>
             </View>
             <View style={styles.textinputcontainer}>
-              <SvgUri
-                source={images.address}
-                style={{width: 16, height: 18, top: 22}}
-              />
+            <Ionicons name='ios-location-outline' color={colors.orange} size={20} style={{top:20}}/>
               <TextInput
                 style={styles.textfield}
                 placeholder="Address"

@@ -15,6 +15,7 @@ import SvgUri from 'react-native-svg-uri';
 import images from '@constants/Images';
 import fonts from '@constants/Fonts';
 import {useNavigation} from '@react-navigation/native';
+import Feather from 'react-native-vector-icons/Feather'
 const {width} = Dimensions.get('screen');
 
 export default function Hometabbarmodal({bgColor}) {
@@ -35,7 +36,7 @@ export default function Hometabbarmodal({bgColor}) {
                 justifyContent: 'space-around',
               }}>
               <View style={styles.subcontainer}>
-                <SvgUri source={images.Nobacth} />
+                <Image source={images.Nobacth} />
               </View>
               <View style={styles.subcontainer}>
                 <Text style={styles.text1}>No batches found?</Text>
@@ -72,7 +73,7 @@ export default function Hometabbarmodal({bgColor}) {
       <TouchableOpacity
         style={styles.button}
         onPress={() => setModalVisible(true)}>
-        <SvgUri source={images.Plus} />
+        <Feather name='plus'  color={colors.white} size={22}/>
       </TouchableOpacity>
     </View>
   );

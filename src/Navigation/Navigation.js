@@ -17,6 +17,7 @@ import SettingsScreen from '@screens/SettingsScreen';
 import Batchesdetail from '@screens/Batchesdetail';
 import Signin from '@screens/Signin'
 import TeachersTab from './TeachersTab'
+import Messagecomponent from '@screens/Messagecomponent';
 
 const Stack = createStackNavigator();
 
@@ -29,18 +30,19 @@ const App = () => {
     <NavigationContainer>
       <StatusBar backgroundColor='white' barStyle="dark-content" />
       <Stack.Navigator  screenOptions={{headerShown: false}}>
-      
-
-            <Stack.Screen name="Home"  component={StudentsTab} /> 
+        
+            <Stack.Screen name="Home" component={Usertype} />
+          <Stack.Screen name="tab"  component={StudentsTab} /> 
             <Stack.Screen name="initial" component={Home} />
             <Stack.Screen name="Batches" component={Batches} />
             <Stack.Screen name="Batchesdetail" component={Batchesdetail} />
             <Stack.Screen name="Chats" component={Chats} />
             <Stack.Screen name="Profile" component={Profile}/>
             <Stack.Screen name="SettingsScreen" component={SettingsScreen}/>
+            <Stack.Screen name="Messagecomponent" component={Messagecomponent}/>
            
      
-          <Stack.Screen name="Homess" component={Usertype} />
+          
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Signin" component={Signin}/> 
           <Stack.Screen name="Register" component={Register}/>

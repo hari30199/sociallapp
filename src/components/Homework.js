@@ -10,7 +10,8 @@ import fonts from '@constants/Fonts';
 import colors from '@constants/Colors';
 import images from '@constants/Images';
 import SvgUri from 'react-native-svg-uri';
-
+import Feather from 'react-native-vector-icons/Feather'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 const {width} = Dimensions.get('screen');
 const {height} = Dimensions.get('screen');
 
@@ -33,14 +34,14 @@ export default function Homework() {
             </View>
 
             <View style={styles.timings}>
-              <SvgUri source={images.time} />
+              <MaterialCommunityIcons name='clock-time-three-outline' sixe={10} color={colors.orange} />
               <Text style={styles.tdtext}> 8:00 AM</Text>
-              <SvgUri style={{left: 20}} source={images.datecard} />
+              <Feather name='calendar' color={colors.orange} size={10} style={{left:20}}/>
               <Text style={[styles.tdtext, {left: 20}]}> 7th July, 2022</Text>
             </View>
           </View>
           <TouchableOpacity style={styles.download}>
-            <SvgUri source={images.download} />
+          <Feather name='download' color={colors.black} size={18} style={{}}/>
           </TouchableOpacity>
         </View>
       </View>

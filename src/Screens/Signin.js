@@ -310,6 +310,7 @@ const styles = StyleSheet.create({
   textfield: {
     top: 10,
     left: 16,
+    width:'100%'
   },
 });
 

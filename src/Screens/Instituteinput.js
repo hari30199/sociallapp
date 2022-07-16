@@ -106,7 +106,7 @@ const RegisterScreen = ({navigation, route}) => {
                 <View style={{top: 10, alignItems: 'center'}}>
                   <TouchableOpacity
                     style={styles.touchables}
-                    onPress={() => submit()}>
+                    onPress={() =>navigation.navigate('OtpScreen')}>
                     <Text style={styles.text}>Next</Text>
                   </TouchableOpacity>
                 </View>
@@ -232,6 +232,7 @@ const styles = StyleSheet.create({
   textfield: {
     top: 10,
     left: 16,
+    width:'100%'
   },
 });
 

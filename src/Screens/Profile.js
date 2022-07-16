@@ -12,6 +12,8 @@ import {
 import {useNavigation,useIsFocused} from '@react-navigation/native';
 import SvgUri from 'react-native-svg-uri';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
+import Feather from 'react-native-vector-icons/Feather'
+
 
 import fonts from '@constants/Fonts';
 import colors from '@constants/Colors';
@@ -47,7 +49,7 @@ export default function TabViewExample() {
 
 
   const navigation = useNavigation();
-  navigation.setOptions({ tabBarVisible: false })
+  // navigation.setOptions({ tabBarVisible: false })
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     {key: 'Info', title: 'Info'},
@@ -89,17 +91,15 @@ export default function TabViewExample() {
             <TouchableOpacity
               onPress={() => navigation.navigate('SettingsScreen')}
               style={styles.headerbuttons}>
-              <SvgUri
-                style={{width: 14, height: 24, top: 4, right: 7}}
-                source={images.settings}
-              />
+             <Feather name='settings'  size={22} color={colors.black} style={{top:10,right:10}}/>
             </TouchableOpacity>
           </View>
         </View>
         <View style={styles.profilecontainer}>
           <View style={styles.profileimage}></View>
-          <TouchableOpacity>
-             <SvgUri style={{bottom: 25, left: 64}} source={images.editicon} />
+          <TouchableOpacity style={{left:44,bottom:10}}>
+          <Feather name='edit'  size={18} color={colors.black} style={{}}/>
+
           </TouchableOpacity>
          
           <Text

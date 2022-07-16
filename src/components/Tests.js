@@ -12,6 +12,8 @@ import fonts from '@constants/Fonts';
 import colors from '@constants/Colors';
 import images from '@constants/Images';
 import SvgUri from 'react-native-svg-uri';
+import Feather from 'react-native-vector-icons/Feather'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const {width} = Dimensions.get('screen');
 const {height} = Dimensions.get('screen');
@@ -36,7 +38,7 @@ const Tests = () => {
               <Text style={styles.username}>Test 1</Text>
               <Text style={styles.teachercode}>Subject Name</Text>
             </View>
-            <SvgUri source={images.testdownload} />
+            <Feather name='download' color={colors.activecolor} size={16} style={{}}/>
           </View>
 
           {/* -------date and time------- */}
@@ -44,12 +46,11 @@ const Tests = () => {
           <View style={styles.datetimecont}>
             <View>
               <Text style={styles.time}>
-                <SvgUri source={images.liveclock} /> 8:00 AM
-              </Text>
+              <MaterialCommunityIcons name='clock-time-three-outline' sixe={10} color={colors.orange}  style={{left:10}}/>8:00 AM</Text>
             </View>
             <View>
               <Text style={styles.date}>
-                <SvgUri source={images.livedate} /> 2 hr
+              <Feather name='calendar' color={colors.orange} size={10} style={{left:36}}/> 2 hr
               </Text>
             </View>
           </View>

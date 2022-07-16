@@ -16,11 +16,11 @@ const BottomBar = createBottomTabNavigator();
 
 export default function TabBar ({barColor}) {
   const modalcon = global.tabbuttonprops
-  const mor = global.tab
-console.log(mor,global.tab)
+//   const mor = global.tab
+// console.log(mor,global.tab)
   BottomBar.navigationOptions = ({ navigation }) => {
     let tabBarVisible = true;
-    if (navigation.state.index > 0 && navigation.state.routes.routeName === "Profile") {
+    if (navigation.state.index > 0 && navigation.state.routes.routeName === "Home") {
       tabBarVisible = false;
     }
   

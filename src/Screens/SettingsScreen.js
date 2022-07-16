@@ -12,6 +12,8 @@ import fonts from '@constants/Fonts';
 import colors from '@constants/Colors';
 import images from '@constants/Images';
 import SvgUri from 'react-native-svg-uri';
+import Ionicons from 'react-native-vector-icons/Ionicons'
+import AntDesign from 'react-native-vector-icons/AntDesign'
 import {useNavigation} from '@react-navigation/native';
 
 const SettingsScreen = () => {
@@ -48,7 +50,7 @@ const SettingsScreen = () => {
             <Text style={styles.text}>Account Settings</Text>
           </View>
           <View style={styles.imageright}>
-            <SvgUri source={images.settingsarrow} />
+            <Ionicons name='play' size={20} color={colors.activecolor}/>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.list}>
@@ -59,7 +61,7 @@ const SettingsScreen = () => {
             <Text style={styles.text}>Help Center</Text>
           </View>
           <View style={styles.imageright}>
-            <SvgUri source={images.settingsarrow} />
+          <Ionicons name='play' size={20} color={colors.activecolor}/>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.list}>
@@ -70,7 +72,7 @@ const SettingsScreen = () => {
             <Text style={styles.text}>Privacy Policy</Text>
           </View>
           <View style={styles.imageright}>
-            <SvgUri source={images.settingsarrow} />
+          <Ionicons name='play' size={20} color={colors.activecolor}/>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.list}>
@@ -81,7 +83,7 @@ const SettingsScreen = () => {
             <Text style={styles.text}>Terms of Service</Text>
           </View>
           <View style={styles.imageright}>
-            <SvgUri source={images.settingsarrow} />
+          <Ionicons name='play' size={20} color={colors.activecolor}/>
           </View>
         </TouchableOpacity>
       </View>

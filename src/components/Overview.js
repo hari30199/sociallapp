@@ -5,6 +5,7 @@ import fonts from '@constants/Fonts';
 import colors from '@constants/Colors';
 import images from '@constants/Images';
 import SvgUri from 'react-native-svg-uri';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const Overview = () => {
   return (
@@ -13,7 +14,7 @@ const Overview = () => {
         <View style={{width: '100%', flexDirection: 'row'}}>
           <View style={styles.card}>
             <View style={styles.images}>
-              <SvgUri source={images.ovbatches} />
+            <MaterialCommunityIcons name='desktop-mac-dashboard' size={35} color={colors.black}  style={{left:5}}/>
             </View>
             <View style={styles.textcontainer}>
               <Text style={styles.text}>Batch Start Date</Text>
@@ -22,7 +23,7 @@ const Overview = () => {
           </View>
           <View style={styles.card}>
             <View style={styles.images}>
-              <SvgUri source={images.ovqrcode} />
+            <MaterialCommunityIcons name='qrcode-scan' size={25} color={colors.black}  style={{left:10}}/>
             </View>
             <View style={styles.textcontainer}>
               <Text style={styles.text}>Batch Code</Text>

@@ -19,7 +19,7 @@ import fonts from '@constants/Fonts';
 import colors from '@constants/Colors';
 import images from '@constants/Images';
 import {useNavigation} from '@react-navigation/native';
-import SvgUri, {Circle} from 'react-native-svg-uri';
+import Svg, {Circle} from 'react-native-svg-uri';
 
 const CELL_SIZE = 55;
 const CELL_BORDER_RADIUS = 8;
@@ -131,7 +131,7 @@ const AnimatedExample = () => {
         </View>
       </View>
       <View style={{flex: 6, justifyContent: 'center', alignItems: 'center'}}>
-        <SvgUri width="400" height="200" source={images.Otpscreen} />
+       <Image  source={images.Otpscreen}/>
       </View>
       <View style={{flex: 6, alignItems: 'center'}}>
         <Text
@@ -158,6 +158,9 @@ const AnimatedExample = () => {
           keyboardType="number-pad"
           renderCell={renderCell}
         />
+        <TouchableOpacity onPress={()=>navigation.navigate('Login')}>
+
+        
         <Text
           style={{
             top: 40,
@@ -165,8 +168,9 @@ const AnimatedExample = () => {
             fontFamily: fonts.Medium,
             color: colors.black,
           }}>
-          +91 90088 37734{' '}
+          +91 90088 37734
         </Text>
+        </TouchableOpacity>
       </View>
       <View style={{flex: 2, justifyContent: 'center', alignItems: 'center'}}>
         <TouchableOpacity
